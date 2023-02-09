@@ -1,15 +1,15 @@
 <?php
 
-use App\Http\Controllers\admin\ActorController;
+use App\Http\Controllers\Admin\ActorController;
 use App\Http\Controllers\Admin\AttributeController;
 use App\Http\Controllers\Admin\AttributeValueController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\admin\DirectorController;
+use App\Http\Controllers\Admin\DirectorController;
 use App\Http\Controllers\Admin\LoginController;
-use App\Http\Controllers\admin\SeasonController;
-use App\Http\Controllers\admin\SeasonEpisodeController;
+use App\Http\Controllers\Admin\SeasonController;
+use App\Http\Controllers\Admin\SeasonEpisodeController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\VerificationController;
 use Illuminate\Support\Facades\Route;

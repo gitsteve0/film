@@ -3,7 +3,7 @@
 use App\Http\Controllers\Client\CartController;
 use App\Http\Controllers\Client\HomeController;
 use App\Http\Controllers\Client\LoginController;
-use App\Http\Controllers\client\SeasonController;
+use App\Http\Controllers\Client\SeasonController;
 use App\Http\Controllers\Client\VerificationController;
 use Illuminate\Support\Facades\Route;
 use Spatie\Honeypot\ProtectAgainstSpam;
