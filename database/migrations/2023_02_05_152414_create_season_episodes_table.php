@@ -21,6 +21,7 @@ return new class extends Migration
             $table->unsignedInteger('number')->default(0);
             $table->string('duration')->default(0);
             $table->unsignedInteger('viewed')->default(0);
+            $table->string('image')->nullable();
             $table->string('video')->nullable();
             $table->timestamps();
         });

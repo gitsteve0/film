@@ -26,7 +26,7 @@ class AttributeValueSeeder extends Seeder
                 ['name_tm' => '6+', 'name_en' => null, 'name_ru' => null],
                 ['name_tm' => '0+', 'name_en' => null, 'name_ru' => null],
             ]],
-            ['name_tm' => 'Ýurt', 'name_en' => 'Country', 'name_ru' => 'Страна', 'attribute_name' => true, 'values' => [
+            ['name_tm' => 'Ýurdy', 'name_en' => 'Country', 'name_ru' => 'Страна', 'attribute_name' => true, 'values' => [
                 ['name_tm' => 'ABŞ', 'name_en' => 'USA', 'name_ru' => 'США'],
                 ['name_tm' => 'Beýik Britaniýa', 'name_en' => 'Great Britain', 'name_ru' => 'Великобритания'],
                 ['name_tm' => 'Russiýa', 'name_en' => 'Russia', 'name_ru' => 'Россия'],
