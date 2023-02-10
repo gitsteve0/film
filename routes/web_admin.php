@@ -33,12 +33,13 @@ Route::middleware('auth')
     ->name('admin.')
     ->group(function () {
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+        Route::get('/categories/{slug}', [CategoryController::class, 'show'])->name('show')->where('slug', '[A-Za-z0-9-]+');
 
         Route::resource('customers', CustomerController::class)->except(['create', 'store']);
         Route::resource('verifications', VerificationController::class)->only(['index']);
         Route::resource('seasons', SeasonController::class);
         Route::resource('seasonEpisodes', SeasonEpisodeController::class);
-        Route::resource('categories', CategoryController::class)->except(['show']);
+        Route::resource('categories', CategoryController::class);
         Route::resource('attributes', AttributeController::class)->except(['show']);
         Route::resource('actors', ActorController::class)->except(['show']);
         Route::resource('directors', DirectorController::class)->except(['show']);

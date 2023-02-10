@@ -17,7 +17,7 @@ class AttributeValueSeeder extends Seeder
     public function run()
     {
         $objs = [
-            ['name_tm' => 'Ýaşy', 'name_en' => 'Age', 'name_ru' => 'Возраст', 'attribute_name' => true, 'values' => [
+            ['name_tm' => 'Ýaşy', 'name_en' => 'Age', 'name_ru' => 'Возраст', 'values' => [
                 ['name_tm' => '21+', 'name_en' => null, 'name_ru' => null],
                 ['name_tm' => '18+', 'name_en' => null, 'name_ru' => null],
                 ['name_tm' => '16+', 'name_en' => null, 'name_ru' => null],
@@ -26,7 +26,7 @@ class AttributeValueSeeder extends Seeder
                 ['name_tm' => '6+', 'name_en' => null, 'name_ru' => null],
                 ['name_tm' => '0+', 'name_en' => null, 'name_ru' => null],
             ]],
-            ['name_tm' => 'Ýurdy', 'name_en' => 'Country', 'name_ru' => 'Страна', 'attribute_name' => true, 'values' => [
+            ['name_tm' => 'Ýurdy', 'name_en' => 'Country', 'name_ru' => 'Страна', 'values' => [
                 ['name_tm' => 'ABŞ', 'name_en' => 'USA', 'name_ru' => 'США'],
                 ['name_tm' => 'Beýik Britaniýa', 'name_en' => 'Great Britain', 'name_ru' => 'Великобритания'],
                 ['name_tm' => 'Russiýa', 'name_en' => 'Russia', 'name_ru' => 'Россия'],
@@ -41,7 +41,7 @@ class AttributeValueSeeder extends Seeder
                 ['name_tm' => 'Hytaý', 'name_en' => 'China', 'name_ru' => 'Китай'],
                 ['name_tm' => 'Türkmenistan', 'name_en' => 'Turkmenistan', 'name_ru' => 'Туркменистан'],
             ]],
-            ['name_tm' => 'Žanry', 'name_en' => 'Genre', 'name_ru' => 'Жанр', 'attribute_name' => true, 'values' => [
+            ['name_tm' => 'Žanry', 'name_en' => 'Genre', 'name_ru' => 'Жанр', 'values' => [
                 ['name_tm' => 'Harby', 'name_en' => 'Military', 'name_ru' => 'Военные'],
                 ['name_tm' => 'Detektiw', 'name_en' => 'detectives', 'name_ru' => 'Детективы'],
                 ['name_tm' => 'Dokumental', 'name_en' => 'Documental', 'name_ru' => 'Документальные'],
@@ -56,7 +56,7 @@ class AttributeValueSeeder extends Seeder
                 ['name_tm' => 'Melodrama', 'name_en' => 'Melodram', 'name_ru' => 'Мелодрама'],
                 ['name_tm' => 'Ylym-bilim', 'name_en' => 'Science fiction', 'name_ru' => 'Научная '],
             ]],
-            ['name_tm' => 'Dili', 'name_en' => 'Language', 'name_ru' => 'Язык', 'attribute_name' => true, 'values' => [
+            ['name_tm' => 'Dili', 'name_en' => 'Language', 'name_ru' => 'Язык', 'values' => [
                 ['name_tm' => 'Türkmençe', 'name_en' => 'Turkmen', 'name_ru' => 'Туркменский'],
                 ['name_tm' => 'Rusça', 'name_en' => 'Russian', 'name_ru' => 'Русский'],
                 ['name_tm' => 'Iňlisçe', 'name_en' => 'English', 'name_ru' => 'Английский'],
@@ -74,7 +74,6 @@ class AttributeValueSeeder extends Seeder
                 'name_tm' => $objs[$i]['name_tm'],
                 'name_en' => $objs[$i]['name_en'],
                 'name_ru' => $objs[$i]['name_ru'],
-                'attribute_name' => $objs[$i]['attribute_name'],
                 'sort_order' => $i + 1,
             ]);
 
