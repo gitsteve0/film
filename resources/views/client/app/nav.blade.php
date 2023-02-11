@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary bg-opacity-10" aria-label="navbar">
+<nav class="navbar navbar-expand-md navbar-dark {{ route('home') ? 'fixed-top' : '' }} bg-primary bg-opacity-10" aria-label="navbar">
     <div class="container-xl">
 
         <a class="navbar-brand" href="{{ route('home') }}"><img src="{{ asset('img/logo2.png') }}" style="width: 7%"> @lang('app.app-name')</a>
@@ -21,7 +21,7 @@
                     </form>
                 @else
                     <li class="nav-item">
-                        <a class="nav-link link-light fs-5" href="{{ route('verification') }}">
+                        <a class="nav-link link-light fs-5" href="#">
                             <i class="bi-box-arrow-in-right"></i> @lang('app.login')
                         </a>
                     </li>

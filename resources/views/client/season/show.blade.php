@@ -1,54 +1,42 @@
-@extends('admin.layouts.app')
+@extends('client.layouts.app')
 @section('title')
     @lang('app.seasons')
 @endsection
 @section('content')
-    <div  class="container-xl py-4">
-        <div  class="row g-4 mb-4">
-            <div class="col-4">
+    <div  class="container-xl py-5 mt-5 text-light">
+        <div  class="d-flex mb-4">
+            <div class="col-7">
                 @include('client.app.video')
-            </div>
-            <div class="col-5">
-                <div class="fs-4 fw-semibold">
-                    <i>{{$season->name}}</i>
-                </div>
-                <div class="fs-5 fw-semibold">
-                    <span class="text-secondary">@lang('app.language') :</span> {{$season->language->name_tm}}
-                </div>
-                <div class="fs-5 fw-semibold">
-                    <span class="text-secondary">@lang('app.genre') :</span> {{$season->genre->name_tm}}
-                </div>
-                <div class="fs-5 fw-semibold">
-                    <span class="text-secondary">@lang('app.country') :</span> {{$season->country->name_tm}}
+                <div class="py-3">
+                    <div class="fw-semibold pb-3 d-flex align-items-center">
+                        <i class="fs-2 pe-3">{{$season->name}}</i>
+                        <div class="text-center bg-secondary col-1 fs-5 rounded-3 h-25 mt-2 mx-3">{{$season->age->name_tm}}</div>
+                        <div class="text-center col-1 fs-4 h-25 mt-2 mx-4 d-flex"><i class="bi-star-fill text-warning pe-2"></i>{{$season->rating}}</div>
+                        <div class="text-center col-1 fs-4 h-25 mt-2 mx-3">{{$season->year}}</div>
+                    </div>
+                    <div class="d-flex justify-content-between pt-4">
+                        <div class="col-6 border-bottom pb-3">
+                            {{$season->description}}
+                        </div>
+                        <div class="col-5">
+                            <div class="fs-5 fw-semibold py-1">
+                                <span class="text-secondary">Dili :</span> {{$season->language->name_tm}}
+                            </div>
+                            <div class="fs-5 fw-semibold py-1">
+                                <span class="text-secondary">Žanry :</span> {{$season->genre->name_tm}}
+                            </div>
+                            <div class="fs-5 fw-semibold py-1">
+                                <span class="text-secondary">Ýurdy :</span> {{$season->country->name_tm}}
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
             <div class="col">
-                episodes
+
             </div>
         </div>
     </div>
-
 @endsection
-
-<div class="col-6 col-sm-4 col-lg-3">
-    <a href="#" class="text-decoration-none text-dark">
-        <div class="d-flex border bg-light rounded">
-            <div class="col">
-                <img src="{{ asset('img/seasons/season.jpg') }}" alt="{{ $season->name }}" class="img-fluid rounded">
-            </div>
-            <div class="col p-1 ps-2 py-2">
-                <div class="fs-6 fw-semibold">
-                    <i>{{$season->name}}</i> {{$season->age->name_tm}}  {{'(' . $season->year . ')'}}
-                </div>
-                <div class="small fw-semibold py-2">
-                    <i class="bi-translate"></i>
-                    {{$season->language->name_tm}}
-                </div>
-                <div class="text-success fw-semibold py-1">
-                    <i class="bi-camera-reels"></i>
-                    {{$season->episodes_count}}
-                </div>
-            </div>
-        </div>
-    </a>
-</div>

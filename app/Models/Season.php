@@ -86,7 +86,7 @@ class Season extends Model
 
     public function isNew()
     {
-        if ($this->created_at >= Carbon::now()->subMonth()->toDateTimeString()) {
+        if ($this->created_at >= Carbon::now()->subWeek()->toDateTimeString()) {
             return true;
         } else {
             return false;
