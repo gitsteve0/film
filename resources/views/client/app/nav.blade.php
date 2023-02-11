@@ -26,7 +26,7 @@
                         </a>
                     </li>
                 @endauth
-                @if(app()->getLocale() == 'en')
+                @if(app()->getLocale() == 'tm')
                     <li class="nav-item">
                         <a class="nav-link fs-5" href="{{ route('language', 'tm') }}">
                             <img src="{{ asset('img/flag/tkm.png') }}" alt="Türkmen" style="height:1rem;">
