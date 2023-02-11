@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -27,5 +29,15 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::useBootstrapFive();
         Model::preventLazyLoading(!app()->isProduction());
+
+        View::composer('client.app.nav', function ($view) {
+            $categories = Category::orderBy('sort_order')
+                ->orderBy('slug')
+                ->get();
+
+            $view->with([
+                'categories' => $categories,
+            ]);
+        });
     }
 }

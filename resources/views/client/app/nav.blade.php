@@ -1,7 +1,15 @@
 <nav class="navbar navbar-expand-md navbar-dark {{ route('home') ? 'fixed-top' : '' }} bg-primary bg-opacity-10" aria-label="navbar">
-    <div class="container-xl">
+    <div class="container-xxl">
 
         <a class="navbar-brand" href="{{ route('home') }}"><img src="{{ asset('img/logo2.png') }}" style="width: 7%"> @lang('app.app-name')</a>
+
+        <div>
+            @foreach($categories as $category)
+                <a class="link-light text-decoration-none fs-5 mx-2" href="{{ route('category', $category->slug) }}">
+                    {{ $category->getName() }}
+                </a>
+            @endforeach
+        </div>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
