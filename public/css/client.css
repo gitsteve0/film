@@ -1,0 +1,10 @@
+.bg-img {
+    background-image: url("../img/bg-img.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+}
+.py-15 {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+}

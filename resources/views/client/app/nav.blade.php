@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-info bg-opacity-10" aria-label="navbar">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary bg-opacity-10" aria-label="navbar">
     <div class="container-xl">
 
-        <a class="navbar-brand" href="{{ route('home') }}"><img src="{{ asset('img/logo.png') }}" style="width: 6%"> @lang('app.app-name')</a>
+        <a class="navbar-brand" href="{{ route('home') }}"><img src="{{ asset('img/logo2.png') }}" style="width: 7%"> @lang('app.app-name')</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -21,14 +21,14 @@
                     </form>
                 @else
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('verification') }}">
+                        <a class="nav-link link-light fs-5" href="{{ route('verification') }}">
                             <i class="bi-box-arrow-in-right"></i> @lang('app.login')
                         </a>
                     </li>
                 @endauth
                 @if(app()->getLocale() == 'en')
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('language', 'tm') }}">
+                        <a class="nav-link fs-5" href="{{ route('language', 'tm') }}">
                             <img src="{{ asset('img/flag/tkm.png') }}" alt="Türkmen" style="height:1rem;">
                         </a>
                     </li>
